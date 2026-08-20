@@ -21,18 +21,11 @@ from sklearn.pipeline import Pipeline
 from bson import ObjectId
 from pymongo import MongoClient, ASCENDING
 
-# ── MongoDB connections (try all) ──────────────────────────────────────────────
-MONGO_URIS = {
-    "web1": "mongodb://biocalculus:IjN75Ve7RTASu9u@31.97.224.96:27017/biocalculus?authSource=biocalculus",
-    "web2": "mongodb://biocalculus:3DnsRG8pQ11ul6u@10.100.200.7:27017/biocalculus?authSource=biocalculus",
-    "web4": "mongodb://biocalculus:CAclO8k4k3o5@187.127.143.99:27017/biocalculus?authSource=biocalculus",
-    "web6": "mongodb://Biocalculus:uEvp35Pvg01dXn2@187.127.188.197:27017/Biocalculus?authSource=Biocalculus"
-}
-DB_NAME = "biocalculus"
+# ── MongoDB connections (try all)
 
 # ── Template directories ───────────────────────────────────────────────────────
-VT_TEMPLATE_DIR  = "/home/rootbio/vt/"
-NSR_TEMPLATE_DIR = "/home/rootbio/vt/"
+VT_TEMPLATE_DIR  = "/home/vt/"
+NSR_TEMPLATE_DIR = "/home/vt/"
 
 # ── Signal ─────────────────────────────────────────────────────────────────────
 FS           = 250
