@@ -9,7 +9,7 @@ CLI Usage:
           --startdate "2026-06-09 17:35:33" --enddate "2026-06-10 15:38:03"
   python3 vt_scan.py --userid <uid> --dataset all --update_label vt
 
-Importable usage (e.g. from analyze_weball.py, right after analysis finishes):
+Importable usage (right after analysis finishes):
   from vt_scan import run_vt_scan_on_datasets
   run_vt_scan_on_datasets(userid_str="...", dataset_ids=["2026-06-05 07:16:48", ...])
 """
@@ -25,7 +25,7 @@ from sklearn.pipeline import Pipeline
 from bson import ObjectId
 from pymongo import MongoClient, ASCENDING
 
-# ── MongoDB connections (try all) — kept separate from analyze_weball's config ──
+
 MONGO_URIS = {
     
 }
@@ -47,7 +47,7 @@ SVM_PROB_THRESH = 0.70
 SIM_DIFF_THRESH = 0.30
 # Gate 3 OR-path: if the SVM is extremely confident on its own, confirm VT
 # even if sim_diff is small. Prevents cases like P(VT)=1.000 but diff=0.094
-# (a real VT beat) from being silently rejected by the secondary margin check.
+# () from being silently rejected by the secondary margin check.
 SVM_VERY_HIGH_PROB = 0.95
 MIN_VT_RUN      = 3
 MAX_GAP         = 3
