@@ -26,12 +26,7 @@ from bson import ObjectId
 from pymongo import MongoClient, ASCENDING
 
 # ── MongoDB connections (try all) — kept separate from analyze_weball's config ──
-MONGO_URIS = {
-    "web1": "mongodb://biocalculus:IjN75Ve7RTASu9u@31.97.224.96:27017/biocalculus?authSource=biocalculus",
-    "web2": "mongodb://biocalculus:3DnsRG8pQ11ul6u@212.38.94.170:27017/biocalculus?authSource=biocalculus",
-    "web4": "mongodb://biocalculus:CAclO8k4k3o5@187.127.143.99:27017/biocalculus?authSource=biocalculus",
-}
-DB_NAME = "biocalculus"
+
 
 # ── Template directories ───────────────────────────────────────────────────────
 VT_TEMPLATE_DIR  = "/home/rootbio/vt/"
